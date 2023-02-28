@@ -1,0 +1,145 @@
+.journal {
+  padding-bottom: 64px;
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(510px, 1fr));
+    gap: 64px;
+  }
+  &__animation {
+    opacity: 0;
+    transition: all 0.8s ease 0.6s;
+
+    &.animation__active {
+      opacity: 1;
+    }
+  }
+  &__preview {
+    position: relative;
+  }
+  &__contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+// .preview-image {
+// }
+.preview-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  //   transform: translate(50%, 0);
+  padding: 30px 34px;
+  margin: 16px;
+  text-align: center;
+  &-data {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+  &-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 6px 0;
+  }
+  &-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  &-button {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    padding-top: 10px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.contennts-name {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  &-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 56px;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+  }
+  &-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    gap: 10px;
+
+    span {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 21px;
+      align-items: flex-end;
+    }
+  }
+}
+
+.contents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  &-item {
+    display: flex;
+    gap: 30px;
+    &-image {
+      width: 160px;
+      height: 115px;
+    }
+    &-description {
+      &-data {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+      }
+      &-text {
+        padding: 4px 0 8px 0;
+      }
+      //   &-subtext {
+      //   }
+    }
+  }
+}
+
+.contents-description-text-font-size {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+@media (max-width: 555px) {
+  .journal {
+    &__body {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .contents-list {
+    &-item {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}

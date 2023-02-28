@@ -1,0 +1,113 @@
+.color {
+  &__white {
+    color: $white;
+  }
+
+  &__black {
+    color: $black;
+  }
+
+  &__grey {
+    color: $grey;
+  }
+
+  &__orange {
+    color: $orange;
+
+    &-light {
+      color: $grey__light;
+    }
+  }
+
+  &__aqua {
+    color: $aqua;
+  }
+}
+
+.background {
+  &__white {
+    background: $white;
+  }
+
+  &__black {
+    background: $black;
+  }
+
+  &__grey {
+    background: $grey;
+  }
+
+  &__orange {
+    background: $orange;
+  }
+
+  &__aqua {
+    background: $aqua;
+  }
+
+  &__light {
+    background: $background__light;
+  }
+
+  &__button {
+    background: $background__button-dark;
+  }
+
+  &__goods {
+    background: $background-goods-description;
+
+    &-light {
+      background: $background-goods-description-light;
+    }
+  }
+}
+
+//================================================================================================================================
+
+.title {
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  &__big {
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 37px;
+    letter-spacing: 0.56px;
+  }
+
+  &__small {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+//================================================================================================================================
+
+.button {
+  display: flex;
+  max-width: fit-content;
+  color: $white;
+  padding: 12px 26px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 4px;
+  transition: 0.3s;
+  border: 2px solid $orange;
+
+  &:hover {
+    background: $button__hover;
+    border: 2px solid $button__hover;
+  }
+
+  &__main {
+    background: $orange;
+  }
+}
+
+//================================================================================================================================
